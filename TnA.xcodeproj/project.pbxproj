@@ -15,6 +15,10 @@
 		84DE90241F1E5F750061247C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE90221F1E5F750061247C /* Main.storyboard */; };
 		84DE90261F1E5F750061247C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DE90251F1E5F750061247C /* Assets.xcassets */; };
 		84DE90291F1E5F750061247C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE90271F1E5F750061247C /* LaunchScreen.storyboard */; };
+		84DE90351F1E61E60061247C /* 2048x1546.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DE90341F1E61E60061247C /* 2048x1546.png */; };
+		84DE90371F1E62340061247C /* icons8-Ant-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DE90361F1E62340061247C /* icons8-Ant-64.png */; };
+		84DE903A1F1E63290061247C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE90391F1E63290061247C /* Player.swift */; };
+		84DE903C1F1EA2470061247C /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE903B1F1EA2470061247C /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		84DE90251F1E5F750061247C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DE90281F1E5F750061247C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DE902A1F1E5F750061247C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DE90341F1E61E60061247C /* 2048x1546.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2048x1546.png; sourceTree = "<group>"; };
+		84DE90361F1E62340061247C /* icons8-Ant-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Ant-64.png"; sourceTree = "<group>"; };
+		84DE90391F1E63290061247C /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		84DE903B1F1EA2470061247C /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +68,14 @@
 		84DE90171F1E5F750061247C /* TnA */ = {
 			isa = PBXGroup;
 			children = (
+				84DE90381F1E62F90061247C /* PlayerClass */,
 				84DE90181F1E5F750061247C /* AppDelegate.swift */,
 				84DE901A1F1E5F750061247C /* GameScene.sks */,
+				84DE90361F1E62340061247C /* icons8-Ant-64.png */,
+				84DE90341F1E61E60061247C /* 2048x1546.png */,
 				84DE901C1F1E5F750061247C /* Actions.sks */,
 				84DE901E1F1E5F750061247C /* GameScene.swift */,
+				84DE903B1F1EA2470061247C /* Items.swift */,
 				84DE90201F1E5F750061247C /* GameViewController.swift */,
 				84DE90221F1E5F750061247C /* Main.storyboard */,
 				84DE90251F1E5F750061247C /* Assets.xcassets */,
@@ -71,6 +83,14 @@
 				84DE902A1F1E5F750061247C /* Info.plist */,
 			);
 			path = TnA;
+			sourceTree = "<group>";
+		};
+		84DE90381F1E62F90061247C /* PlayerClass */ = {
+			isa = PBXGroup;
+			children = (
+				84DE90391F1E63290061247C /* Player.swift */,
+			);
+			name = PlayerClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +156,9 @@
 				84DE901B1F1E5F750061247C /* GameScene.sks in Resources */,
 				84DE90261F1E5F750061247C /* Assets.xcassets in Resources */,
 				84DE90291F1E5F750061247C /* LaunchScreen.storyboard in Resources */,
+				84DE90351F1E61E60061247C /* 2048x1546.png in Resources */,
 				84DE901D1F1E5F750061247C /* Actions.sks in Resources */,
+				84DE90371F1E62340061247C /* icons8-Ant-64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DE903A1F1E63290061247C /* Player.swift in Sources */,
+				84DE903C1F1EA2470061247C /* Items.swift in Sources */,
 				84DE901F1F1E5F750061247C /* GameScene.swift in Sources */,
 				84DE90211F1E5F750061247C /* GameViewController.swift in Sources */,
 				84DE90191F1E5F750061247C /* AppDelegate.swift in Sources */,
@@ -313,6 +337,7 @@
 				84DE902F1F1E5F750061247C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
