@@ -11,7 +11,6 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate
 
 {
-    
     let fixedDelta: CGFloat = 1.0 / 60.0 // 60 FPS
     
     var enemySpawnTimer: CGFloat = 0
@@ -23,10 +22,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     /* it gives enemy speed (velocity) */
     let enemySpeed: CGFloat = 1000
     
-    /* it gives bomb speed */
+    /* it gives bomb speed (velocity)*/
     let bombSpeed: CGFloat = 1000
     
-    /* it gives taco speed */
+    /* it gives taco speed (velocity) */
     let tacoSpeed: CGFloat = 1000
     
     var player : Player!
@@ -56,6 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     var tacos: [SKSpriteNode] = []
     
     override func didMove(to view: SKView) {
+        self.view?.showsPhysics = false
         initializeGame();
     }
     
@@ -63,17 +63,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         managePlayer()
         player.position.x = clamp(value: player.position.x, lower: player.size.width / 2, upper: UIScreen.main.bounds.size.width * 2 - player.size.width / 2)
         
-        if enemySpawnTimer > 5 {
+        if enemySpawnTimer > 2.5 {
             spawnEnemy()
             enemySpawnTimer = 0        
         }
         
-        if bombSpawnTimer > 6 {
+        if bombSpawnTimer > 0.5  {
             spawnBombs()
             bombSpawnTimer = 0
         }
         
-        if tacoSpawnTimer > 7 {
+        if tacoSpawnTimer > 1.5 {
             spawnTacos()
             tacoSpawnTimer = 0
         }
@@ -125,7 +125,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let nodeB = contact.bodyB.node
         
         if nodeA?.name == "enemy" || nodeB?.name == "enemy" {
-            score += 1
+            score += 2
             if nodeA?.name == "enemy" {
                 enemies.remove(at: enemies.index(of: nodeA as! SKSpriteNode)!)
                 nodeA?.removeFromParent()
